@@ -154,6 +154,7 @@ ngrok http 8501
 ```
 
 4. **Share the generated URL**
+   My Publicly accessible Streamlit app via Ngrok is: [https://contrite-lachlan-unbronzed.ngrok-free.dev](https://contrite-lachlan-unbronzed.ngrok-free.dev/)
 
 ### Cloud Deployment Options
 - **Streamlit Sharing**: Push to GitHub and deploy via share.streamlit.io
