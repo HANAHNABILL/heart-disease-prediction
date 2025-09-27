@@ -1,0 +1,24 @@
+Heart Disease Prediction - Model Evaluation Results
+==================================================
+
+Best Performing Models:
+- Random Forest (Randomized Search): 90.16% Accuracy, 89.66% F1-Score
+- XGBoost (Randomized Search): 86.89% Accuracy, 86.67% F1-Score  
+- K-Nearest Neighbors (Baseline): 88.52% Accuracy, 88.89% F1-Score
+
+Key Metrics:
+- Highest Accuracy: 90.16% (Random Forest - Randomized Search)
+- Highest F1-Score: 89.66% (Random Forest - Randomized Search) 
+- Highest AUC Score: 95.78% (Random Forest - Randomized Search)
+
+Model Comparison:
+| Model            | Best Accuracy | Best F1-Score | AUC Score   |
+|------------------|---------------|---------------|-------------|
+| Random Forest    | 90.16%        | 89.66%        | 95.78%      |
+| XGBoost          | 86.89%        | 86.67%        | 94.16%      |
+| K-Nearest Neigh. | 88.52%        | 88.89%        | 91.56%      |
+| Logistic Reg.    | 85.25%        | 85.25%        | 94.91%      |
+
+Clustering Results (Supplementary):
+- K-Means Silhouette Score: 0.1752
+- Hierarchical Silhouette Score: 0.1624
