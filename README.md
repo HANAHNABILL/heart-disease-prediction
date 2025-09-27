@@ -170,6 +170,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+<div align="center">
+
 **Made with ❤️ for better healthcare outcomes**
 
-Copy and paste this into your `README.md` file. This is properly formatted and follows the exact structure they want!
+[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/heart-disease-prediction&type=Date)](https://star-history.com/#yourusername/heart-disease-prediction&Date)
+
+</div>
+
+---
