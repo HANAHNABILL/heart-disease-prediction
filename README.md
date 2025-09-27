@@ -47,8 +47,8 @@ Heart_Disease_Project/
 │   ├── 5_unsupervised_learning.ipynb  # Clustering analysis
 │   └── 6_hyperparameter_tuning.ipynb  # Hyperparameter optimization
 ├── models/
-│   ├── optimized_model.pkl            # Trained machine learning model
-│   └── scaler.pkl                     # Feature scaling model
+│   ├──  final_model.pkl               # Trained machine learning model
+│ 
 ├── ui/
 │   └── app.py                         # Streamlit application
 ├── deployment/
