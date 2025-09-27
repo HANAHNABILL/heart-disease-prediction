@@ -1,0 +1,24 @@
+# Ngrok Deployment Setup for Heart Disease Prediction App
+# ======================================================
+
+## Prerequisites:
+1. Ngrok account (free at https://ngrok.com/)
+2. Ngrok installed on your system
+3. Streamlit app ready to run
+
+## Installation Steps:
+
+### 1. Install Ngrok
+#### On Windows (PowerShell):
+```powershell
+# Download ngrok
+Invoke-WebRequest -Uri "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip" -OutFile "ngrok.zip"
+
+# Extract ngrok
+Expand-Archive -Path ngrok.zip -DestinationPath .
+
+# Add to PATH (or move ngrok.exe to a folder in your PATH)
+Move-Item ngrok.exe C:\Windows\System32\
+
+# Verify installation
+ngrok version

@@ -1,0 +1,6 @@
+Model,Method,Parameters
+Random Forest,Grid Search,"{'max_depth': 5, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200}"
+XGBoost,Grid Search,"{'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.8}"
+Logistic Regression,Grid Search,"{'C': 0.1, 'penalty': 'l1', 'solver': 'liblinear'}"
+Random Forest,Randomized Search,"{'max_depth': 3, 'min_samples_leaf': 6, 'min_samples_split': 14, 'n_estimators': 285}"
+XGBoost,Randomized Search,"{'learning_rate': np.float64(0.027425083650459835), 'max_depth': 7, 'n_estimators': 149, 'subsample': np.float64(0.6571467271687763)}"
