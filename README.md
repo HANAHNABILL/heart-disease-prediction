@@ -1,4 +1,4 @@
-# ❤️ Heart Disease Prediction System
+# ❤️ Heart Disease Prediction System ❤️
 
 A comprehensive machine learning-based web application for predicting heart disease risk using clinical parameters with an intuitive Streamlit interface.
 
@@ -16,19 +16,19 @@ A comprehensive machine learning-based web application for predicting heart dise
 - [Model Details](#-model-details)
 - [Deployment](#-deployment)
 
-## ✨ Features
+## ✨ Features:
 
-### 🎯 Core Functionality
+###  Core Functionality
 - **Accurate Predictions**: Machine learning model with 85-90% accuracy
 - **Clinical Safety**: Built-in validation rules for edge cases
 - **Real-time Analysis**: Instant risk assessment with clinical context
 
-### 🎨 User Experience
+### User Experience
 - **Modern UI**: Clean, healthcare-focused design with dark/light mode
 - **Interactive Dashboard**: Comprehensive data visualization
 - **Responsive Design**: Works on desktop and mobile devices
 
-### 🔬 Advanced Features
+### Advanced Features
 - **Multi-page Navigation**: Home, Prediction, Analysis, and Insights pages
 - **Clinical Overrides**: Intelligent risk adjustment based on medical patterns
 - **Data Visualization**: PCA analysis, correlation matrices, clustering insights
