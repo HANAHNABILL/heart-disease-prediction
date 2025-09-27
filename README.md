@@ -175,10 +175,3 @@ Made with ❤️ for better healthcare outcomes
 https://api.star-history.com/svg?repos=yourusername/heart-disease-prediction&type=Date
 
 </div>
-
-<div align="center">
-Made with ❤️ for better healthcare outcomes
-
-https://api.star-history.com/svg?repos=yourusername/heart-disease-prediction&type=Date
-
-</div>
