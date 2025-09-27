@@ -1,24 +1,24 @@
-# Ngrok Deployment Setup for Heart Disease Prediction App
-# ======================================================
+Ngrok Deployment Guide
+======================================================
 
-## Prerequisites:
-1. Ngrok account (free at https://ngrok.com/)
-2. Ngrok installed on your system
-3. Streamlit app ready to run
+1. INSTALL NGROK
+   Option A: npm install -g ngrok
+   Option B: Download from https://ngrok.com/download
 
-## Installation Steps:
+2. RUN STREAMLIT APP
+   streamlit run ui/app.py --server.port 8501
 
-### 1. Install Ngrok
-#### On Windows (PowerShell):
-```powershell
-# Download ngrok
-Invoke-WebRequest -Uri "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip" -OutFile "ngrok.zip"
+3. CREATE NGROK TUNNEL (in new terminal)
+   ngrok http 8501
 
-# Extract ngrok
-Expand-Archive -Path ngrok.zip -DestinationPath .
+4. ACCESS YOUR APP
+   - Local: http://localhost:8501
+   - Public: Use the Forwarding URL shown by ngrok
 
-# Add to PATH (or move ngrok.exe to a folder in your PATH)
-Move-Item ngrok.exe C:\Windows\System32\
+5. TROUBLESHOOTING
+   - If port 8501 is busy, use: --server.port 8502
+   - For authentication: ngrok config add-authtoken YOUR_TOKEN
+   - Check status: http://127.0.0.1:4040 (Ngrok dashboard)
 
-# Verify installation
-ngrok version
+Example Public URL: https://abc-123-456.us.ngrok.io
+(Mine was : https://contrite-lachlan-unbronzed.ngrok-free.dev )
