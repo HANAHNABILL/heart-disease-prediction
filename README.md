@@ -1,6 +1,3 @@
-# heart-disease-prediction
-Machine Learning project for heart disease prediction using clinical data
-
 # ❤️ Heart Disease Prediction System
 
 A machine learning-based web application for predicting heart disease risk using clinical parameters.
