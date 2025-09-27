@@ -1,3 +1,0 @@
-Method,Silhouette,Calinski-Harabasz,Adjusted_Rand_Index,Homogeneity,Completeness,V_Measure,n_Clusters
-K-Means,0.1752,62.6844,0.4469,0.3597,0.3738,0.3666,2
-Hierarchical,0.1624,40.7073,,,,,3
