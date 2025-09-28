@@ -309,22 +309,24 @@ def clinical_override(age, thalach, raw_probability, sex=None, cp=None, exang=No
     return raw_probability, None
 
 #===================Load data and models====================================
-@st.cache_resource
 def load_data():
     try:
-        df = pd.read_csv('data/heart_disease_processed.csv')
-        return df
-    except:
+        # Try multiple possible paths
+        possible_paths = [
+            'data/heart_disease_processed.csv',
+            '../data/heart_disease_processed.csv',
+            '../../data/heart_disease_processed.csv',
+            'Heart_Disease_Project/data/heart_disease_processed.csv'
+        ]
+        
+        for path in possible_paths:
+            if os.path.exists(path):
+                return pd.read_csv(path)
+        st.error(f"Data file not found. Checked: {possible_paths}")
         return None
-
-@st.cache_resource
-def load_model():
-    try:
-        model = joblib.load('models/optimized_model.pkl')
-        scaler = joblib.load('models/scaler.pkl')
-        return model, scaler
-    except:
-        return None, None
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
+        return None
 
 
 def apply_theme_css(dark_mode):
@@ -1135,3 +1137,4 @@ def show_feature_importance(df, model):
 if __name__ == "__main__":
 
     main()
+
