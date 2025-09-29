@@ -309,24 +309,73 @@ def clinical_override(age, thalach, raw_probability, sex=None, cp=None, exang=No
     return raw_probability, None
 
 #===================Load data and models====================================
+#===================Load data and models====================================
+@st.cache_resource
 def load_data():
     try:
         # Try multiple possible paths
         possible_paths = [
-            'data/heart_disease_processed.csv',
-            '../data/heart_disease_processed.csv',
-            '../../data/heart_disease_processed.csv',
-            'Heart_Disease_Project/data/heart_disease_processed.csv'
+            'kata/heart_disease.csv',           # Current structure
+            '../kata/heart_disease.csv',         # If running from ui folder
+            'data/heart_disease_processed.csv',  # Your original path
+            '../data/heart_disease_processed.csv'
         ]
         
         for path in possible_paths:
             if os.path.exists(path):
-                return pd.read_csv(path)
+                df = pd.read_csv(path)
+                return df
+        
         st.error(f"Data file not found. Checked: {possible_paths}")
         return None
     except Exception as e:
         st.error(f"Error loading data: {e}")
         return None
+
+@st.cache_resource
+def load_model():
+    try:
+        # Try multiple possible paths for models
+        possible_model_paths = [
+            'models/optimized_model.pkl',
+            '../models/optimized_model.pkl'
+        ]
+        
+        possible_scaler_paths = [
+            'models/scaler.pkl',
+            '../models/scaler.pkl'
+        ]
+        
+        model_path = None
+        scaler_path = None
+        
+        # Find model file
+        for path in possible_model_paths:
+            if os.path.exists(path):
+                model_path = path
+                break
+                
+        # Find scaler file  
+        for path in possible_scaler_paths:
+            if os.path.exists(path):
+                scaler_path = path
+                break
+        
+        if not model_path:
+            st.error(f"Model file not found. Checked: {possible_model_paths}")
+            return None, None
+            
+        if not scaler_path:
+            st.error(f"Scaler file not found. Checked: {possible_scaler_paths}")
+            return None, None
+        
+        model = joblib.load(model_path)
+        scaler = joblib.load(scaler_path)
+        return model, scaler
+        
+    except Exception as e:
+        st.error(f"Error loading model: {e}")
+        return None, None
 
 
 def apply_theme_css(dark_mode):
@@ -1135,5 +1184,6 @@ def show_feature_importance(df, model):
 
 
 if __name__ == "__main__":
+
 
     main()
